@@ -1,16 +1,15 @@
 <template>
     <Header />
-    <IntroHome />
+    <HomeView />
 </template>
 
 <script>
 import Header from "./components/Header.vue";
-import IntroHome from "./components/Home/IntroHome.vue";
+import HomeView from "./views/HomeView.vue";
 
 export default{
   components:{
     Header,
-    IntroHome
   }
 }
 </script>

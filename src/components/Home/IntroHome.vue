@@ -1,8 +1,8 @@
 <template>
     <div class="IntroHome">
         <div class="IntroText">
-            <h1>{{title}}</h1>
-            <p>{{paragraph}}</p>
+            <h1>{{ title }}</h1>
+            <p>{{ paragraph }}</p>
         </div>
     </div>
 </template>
