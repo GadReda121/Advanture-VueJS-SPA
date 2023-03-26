@@ -42,6 +42,11 @@ export default {
     }
     h1{
         font-size:50px;
+        animation : textShadow 1s .1s both infinite alternate-reverse; 
+    }
+    @keyframes textShadow{
+        from{text-shadow:0 0 0px #fff}
+        to{text-shadow:0 0 10px #fff}
     }
     @media screen and (max-width:800px){
         .IntroText{

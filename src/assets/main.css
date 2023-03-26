@@ -16,5 +16,16 @@
 }
 
 body{
-    background-color: #bdbdbd;
+    background-color: var(--background);
+}
+
+html::-webkit-scrollbar{
+    width:.2rem;
+}
+html::-webkit-scrollbar-thumb{
+    background-color: var(--main);
+    border-radius: 100px;
+}
+html::-webkit-scrollbar-track{
+    background-color: var(--background);
 }
