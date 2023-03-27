@@ -4,6 +4,7 @@
     --text:#000;
     --main:#EF5F4B;
     --background-text:#ffffff;
+    --head-color : rgb(0, 102, 255);
 }
 *{
     padding:0%;
