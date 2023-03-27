@@ -1,5 +1,5 @@
 <template>
-    <div class="DestinationTitle mb-4">
+    <div class="DestinationTitle mb-3">
         <h2>{{ DestinationTitle }}</h2>
     </div>
 </template>

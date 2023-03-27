@@ -72,6 +72,7 @@ export default {
         background:linear-gradient(to top,#08429824,#fff);
         grid-gap:30px;
         padding:50px;
+        text-align: center;
     }
     }
 </style>

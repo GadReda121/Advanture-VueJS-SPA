@@ -60,4 +60,9 @@ p{
 .iconNot{
     color:#bdbdbd;
 }
+@media screen and (max-width: 767px){
+    .child{
+        justify-content: center;
+    }
+}
 </style>
