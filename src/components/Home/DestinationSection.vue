@@ -40,7 +40,7 @@ export default {
         align-items:center;
         width:80%;
         margin:auto;
-        background:linear-gradient(to left,#08429824,#fff);
+        background:linear-gradient(to left,#E4E7F5,#fff);
         grid-gap:30px;
         padding:30px;
     }
@@ -52,6 +52,11 @@ export default {
     img{
         width:100%;
         mix-blend-mode: multiply;
+        animation:continent 2s .3s infinite both alternate-reverse;
+    }
+    @keyframes continent {
+        from{transform: translateY(0px);}
+        to{transform: translateY(20px);}
     }
     button{
         border:none;

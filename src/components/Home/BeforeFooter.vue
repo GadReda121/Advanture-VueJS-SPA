@@ -44,6 +44,7 @@ export default {
     color:#fff;
     padding:12px 30px 10px 30px;
     margin:auto;
+    cursor:pointer;
 }
 @media screen and (max-width:767px){
     .BeforeFooter .Text{

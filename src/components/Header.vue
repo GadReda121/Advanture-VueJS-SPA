@@ -82,13 +82,13 @@ export default {
 </script>
 
 <style scoped>
-    header{
+    /* header{
         width:100%;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         height: 100px;
-    }
+    } */
     img{
         width:40%;
     }
@@ -127,11 +127,13 @@ export default {
     }
     nav{
         height: 6rem;
-        width: 100vw;
+        width: 100%;
         display: flex;
         justify-content: space-evenly;
-        position: fixed;
+        /* position: fixed; */
         z-index: 10;
+        position: absolute;
+        top:0
         /* box-shadow:0 0 10px rgba(0,0,0,.1); */
     }
 /*Styling Links*/
@@ -145,29 +147,6 @@ export default {
 .items{
     display: flex;
     gap: 30px;
-}
-.nav-links li a{
-    text-decoration: none;
-    margin: 0 0.7vw;
-}
-.nav-links li a:hover {
-    color: #61DAFB;
-}
-.nav-links li {
-    position: relative;
-}
-.nav-links li a::before {
-    content: "";
-    display: block;
-    height: 3px;
-    width: 0%;
-    background-color: #61DAFB;
-    position: absolute;
-    transition: all ease-in-out 250ms;
-    margin: 0 0 0 10%;
-}
-.nav-links li a:hover::before{
-    width: 80%;
 }
 /*Styling Hamburger Icon*/
 .hamburger div{
@@ -191,6 +170,7 @@ export default {
     }
     .hamburger{
         display:block;
+        position: fixed;
         position: absolute;
         cursor: pointer;
         right: 5%;
@@ -198,6 +178,14 @@ export default {
         transform: translate(-5%, -50%);
         z-index: 2;
         transition: all 0.7s ease;
+    }
+    .hamburger div{
+        width: 28px;
+        height:3px;
+        background: #fff;
+        margin: 5px;
+        transition: all 0.3s ease;
+        border-radius: 15px;
     }
     ul a{
         color: #000;

@@ -17,6 +17,7 @@
                 title="Australia"
                 paragraph="Australia is a country and continent surrounded by the Indian and Pacific oceans. Its capital, Canberra, is inland. The country is known for its Sydney Opera House, the Great Barrier Reef, a vast interior desert wilderness called the Outback, and and unique animal species."
                 book="Book Now"
+                class="Australia"
              />
             <DestinationSection 
                 imageUrl="../../../public/Home/sec3.png"
@@ -40,3 +41,9 @@ export default{
     }
 }
 </script>
+
+<style scoped>
+.Australia{
+    direction:rtl;
+}
+</style>
