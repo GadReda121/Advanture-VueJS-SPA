@@ -3,7 +3,7 @@
         <!-- logo -->
         <div class="logo d-flex align-items-center gap-1">
             <font-awesome-icon icon="fa-solid fa-mountain-sun" style="color:var(--main);font-size:25px;"/>
-            <h4>Advan</h4>
+            <h4>{{ logo }}</h4>
         </div>
         <!-- icon -->
         <div class="hamburger" @click="hamburger">
@@ -37,7 +37,9 @@
             </div>
             <!-- tools -->
             <div class="tools">
-                <button type="button">Log In</button>
+                <button>
+                    <a :href="loginUrl">{{ login }}</a>
+                </button>
             </div>
         </ul>
     </nav>
@@ -49,6 +51,13 @@ import { RouterLink, RouterView } from 'vue-router';
 
 export default {
     name: "Header",
+    data() {
+        return {
+            logo: "Advan",
+            login: "Log In",
+            loginUrl: "/login"
+        }
+    },
     methods: {
         hamburger() {
             const hamburger = document.querySelector(".hamburger");
@@ -61,24 +70,9 @@ export default {
             });
             //Hamburger Animation
             hamburger.classList.toggle("toggle");
-        },
-        closeMenu() {
-            const hamburger = document.querySelector(".hamburger");
-            const navLinks = document.querySelector(".nav-links");
-            const links = document.querySelectorAll(".nav-links li");
-
-            hamburger.addEventListener('click', () => {
-                //Animate Links
-                navLinks.classList.remove("open");
-                links.forEach(link => {
-                    link.classList.remove("fade");
-                });
-                //Hamburger Animation
-                hamburger.classList.remove("toggle");
-            });
-            }
         }
     }
+}
 </script>
 
 <style scoped>
@@ -160,7 +154,9 @@ export default {
 .hamburger{
     display: none;
 }
-
+.tools button a{
+    color:#fff !important;
+}
 /*Stying for small screens*/
 @media screen and (max-width: 800px){
     nav{

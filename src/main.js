@@ -10,7 +10,15 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 /* import specific icons */
 import {
-  faMountainSun, faStar, faTent, faMountain, faArrowRight, faPaperPlane} from '@fortawesome/free-solid-svg-icons'
+  faMountainSun,
+  faStar,
+  faTent,
+  faMountain,
+  faArrowRight,
+  faPaperPlane,
+  faEye,
+  faEyeSlash,
+} from "@fortawesome/free-solid-svg-icons";
 /* add icons to the library */
 library.add(
   faMountainSun,
@@ -18,7 +26,9 @@ library.add(
   faTent,
   faMountain,
   faArrowRight,
-  faPaperPlane
+  faPaperPlane,
+  faEye,
+  faEyeSlash
 );
 // Bootstrap
 import "bootstrap";
