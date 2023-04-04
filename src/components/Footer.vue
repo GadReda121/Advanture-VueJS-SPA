@@ -4,11 +4,16 @@
             <!-- subscribe -->
             <div class="subscribe d-flex flex-column gap-3">
                 <!-- Form -->
-                <form action="" class="d-flex">
-                    <input type="email" placeholder="Subscribe to our newsletter" />
-                    <button type="button">
-                        <font-awesome-icon icon="fa-solid fa-paper-plane" />
-                    </button>
+                <form class="d-flex flex-column" @submit.prevent="submit">
+                    <div class="d-flex">
+                        <input type="email" placeholder="Subscribe to our newsletter" v-model="state.form.email"/>
+                        <button type="submit">
+                            <font-awesome-icon icon="fa-solid fa-paper-plane" />
+                        </button>
+                    </div>
+                    <small class="text-light" v-if="v$.form.email.$error">
+                        {{ v$.form.email.$errors[0].$message }}
+                    </small>
                 </form>
                 <!-- Socail -->
                 <div class="social d-flex gap-3">
@@ -95,12 +100,39 @@
 
 <script>
 import FooterLinks from "./FooterLinks.vue";
+import { reactive, computed } from 'vue'
+import { useVuelidate } from '@vuelidate/core'
+import { required, email, minLength } from '@vuelidate/validators'
 
 export default {
     name:"Footer",
     components:{
         FooterLinks
-    }
+    },
+    setup() {
+        const state = reactive({
+            form: {
+                email: "",
+            }
+        });
+        const rules = computed(() => {
+            return {
+                form: {
+                    email: [required, email],
+                },
+            };
+        });
+        const v$ = useVuelidate(rules, state)
+        return { state, rules, v$ }
+    },
+    methods: {
+        submit() {
+            this.v$.$validate();
+            if (!this.v$.$error) {
+                this.$router.push("/")
+            }
+        },
+    },
 }
 </script>
 

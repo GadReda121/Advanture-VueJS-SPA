@@ -1,5 +1,5 @@
 <template>
-    <div class="form mt-5 mb-5">
+    <div class="form">
         <!-- Person -->
         <div class="person d-flex justify-content-center">
             <lord-icon
@@ -25,7 +25,7 @@
             </div>
             <!-- Password -->
             <div class="password d-flex flex-column">
-                <input type="password" placeholder="Password" id="password" v-model="state.form.password" />
+                <input type="password" placeholder="New Password" id="password" v-model="state.form.password" />
                 <font-awesome-icon icon="fa-solid fa-eye" v-show="show" @click="hidePassword"
                     style="position:absolute;right:10px;top:33%;cursor:pointer;" />
                 <font-awesome-icon icon="fa-solid fa-eye-slash" v-show="hide" @click="showPassword"
@@ -36,7 +36,7 @@
             </div>
             <!-- Password Confirmation -->
             <div class="password-confirm d-flex flex-column">
-                <input type="password" placeholder="Password Confirmation" id="passwordConfirmation" v-model="state.form.passwordConfirmation" />
+                <input type="password" placeholder="New Password Confirmation" id="passwordConfirmation" v-model="state.form.passwordConfirmation" />
                 <font-awesome-icon icon="fa-solid fa-eye" v-show="showConfirm" @click="hidePasswordConfirmation"
                     style="position:absolute;right:10px;top:32%;cursor:pointer;" />
                 <font-awesome-icon icon="fa-solid fa-eye-slash" v-show="hideConfirm" @click="showPasswordConfirm"
@@ -54,7 +54,7 @@
 <script>
 import { reactive, computed } from 'vue'
 import { useVuelidate } from '@vuelidate/core'
-import { required, email, minLength, sameAs , numeric} from '@vuelidate/validators'
+import { required, minLength, sameAs , numeric} from '@vuelidate/validators'
 
 export default {
     name: "ResetPasswordForm",
@@ -141,8 +141,14 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-radius: 10px;
+    border-radius: 0px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+    margin-top: 100px;
+    background: rgba(242, 73, 43, 0.50);
+    box-shadow: 0 0px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.3px);
+    -webkit-backdrop-filter: blur(6.3px);
+    border: 1px solid rgba(242, 73, 43, 0.29);
 }
 
 form {

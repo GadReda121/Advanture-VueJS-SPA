@@ -1,47 +1,47 @@
 <template>
     <nav>
         <!-- logo -->
-        <div class="logo d-flex align-items-center gap-1">
+        <div class="logo text-center justify-content-center d-flex align-items-center gap-1">
             <font-awesome-icon icon="fa-solid fa-mountain-sun" style="color:var(--main);font-size:25px;"/>
             <h4>{{ logo }}</h4>
         </div>
         <!-- icon -->
-        <div class="hamburger" @click="hamburger">
+        <!-- <div class="hamburger" @click="hamburger">
             <div class="line1"></div>
             <div class="line2"></div>
             <div class="line3"></div>
-        </div>
+        </div> -->
         <!-- menu -->
-        <ul class="nav-links">
-            <div class="items">
+        <!-- <ul class="nav-links"> -->
+            <!-- <div class="items"> -->
                 <!-- FEATURES -->
-                <RouterLink to="/">
+                <!-- <RouterLink to="/">
                         FEATURES
-                </RouterLink>
+                </RouterLink> -->
                 <!-- DESTINATION -->
-                <RouterLink to="">
+                <!-- <RouterLink to="">
                         DESTINATION
-                </RouterLink>
+                </RouterLink> -->
                 <!-- GALLERY -->
-                <RouterLink to="/about">
+                <!-- <RouterLink to="/about">
                         GALLERY
-                </RouterLink>
+                </RouterLink> -->
                 <!-- BLOG -->
-                <RouterLink to="">
+                <!-- <RouterLink to="">
                         BLOG
-                </RouterLink>
+                </RouterLink> -->
                 <!-- ABOUT -->
-                <RouterLink to="">
+                <!-- <RouterLink to="">
                         ABOUT US
                 </RouterLink>
-            </div>
+            </div> -->
             <!-- tools -->
-            <div class="tools">
+            <!-- <div class="tools">
                 <button>
                     <a :href="loginUrl">{{ login }}</a>
                 </button>
-            </div>
-        </ul>
+            </div> -->
+        <!-- </ul> -->
     </nav>
     <RouterView />
 </template>
@@ -127,7 +127,7 @@ export default {
         /* position: fixed; */
         z-index: 10;
         position: absolute;
-        top:0
+        top:0;
         /* box-shadow:0 0 10px rgba(0,0,0,.1); */
     }
 /*Styling Links*/
@@ -160,7 +160,7 @@ export default {
 /*Stying for small screens*/
 @media screen and (max-width: 800px){
     nav{
-        position: fixed;
+        /* position: fixed; */
         z-index: 3;
         justify-content: center;
     }

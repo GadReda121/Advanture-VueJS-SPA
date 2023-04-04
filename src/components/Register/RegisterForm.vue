@@ -1,5 +1,5 @@
 <template>
-    <div class="form mb-5 mt-5">
+    <div class="form">
         <!-- Person -->
         <div class="person d-flex justify-content-center">
             <lord-icon
@@ -162,8 +162,14 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-radius: 10px;
+    border-radius: 0px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+    margin-top: 100px;
+    background: rgba(242, 73, 43, 0.50);
+    box-shadow: 0 0px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.3px);
+    -webkit-backdrop-filter: blur(6.3px);
+    border: 1px solid rgba(242, 73, 43, 0.29);
 }
 
 form {

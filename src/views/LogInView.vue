@@ -1,5 +1,5 @@
 <template>
-    <div class="login mb-5">
+    <div class="login">
         <Preloader />
         <!-- Form -->
         <LoginForm />
@@ -28,6 +28,14 @@ export default {
 
 <style scoped>
 .login{
-    margin-top:100px;
+    background-image: url(../../public/Home/bg.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    top:0;
+    /* height:100vh; */
+    width:100%;
+    padding: 1px 0px 50px 0px;
 }
 </style>

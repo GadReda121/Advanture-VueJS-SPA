@@ -48,6 +48,7 @@ export default {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: #eee; 
 }
 h1{
     color:var(--main);
