@@ -1,5 +1,6 @@
 <template>
     <div class="login mb-5">
+        <Preloader />
         <!-- Form -->
         <LoginForm />
     </div>
@@ -7,6 +8,8 @@
 
 <script>
 import LoginForm from "../components/Login/LoginForm.vue";
+import Preloader from '../components/Preloader.vue';
+
 export default {
     data() {
         return {
@@ -15,7 +18,11 @@ export default {
     },
     components: {
         LoginForm,
-    }
+        Preloader,
+    },
+    mounted() {
+        document.title="ADVAN | LOGIN"
+    },
 }
 </script>
 

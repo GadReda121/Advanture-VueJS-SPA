@@ -1,5 +1,5 @@
 <template>
-    <div class="form">
+    <div class="form mt-5">
         <!-- Person -->
         <div class="person d-flex justify-content-center">
             <lord-icon
@@ -41,7 +41,7 @@
                 </label>
                 <!-- Forget -->
                 <div class="forget">
-                    <a href="" class="text-light">Forget Password?</a>
+                    <a :href="forgetUrl" class="text-light">{{ forget }}</a>
                 </div>
             </div>
             <!-- login -->
@@ -73,7 +73,9 @@ export default{
             haventTitle: "Haven't Account?",
             register: "Register Now",
             login: "Login",
-            registerUrl:"/Register"
+            registerUrl: "/register",
+            forget: "Forget Password",
+            forgetUrl:"/forgetPassword",
         }
     },
     setup() {
