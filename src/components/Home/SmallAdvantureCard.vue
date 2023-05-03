@@ -42,7 +42,7 @@ export default {
             title:"Australia",
             text1:"Accompanied Travel",
             text2:"Hiking",
-            imageUrl:"../../../public/Home/SmallAdvan.png",
+            imageUrl:"Home/SmallAdvan.png",
             imageAlt:"Small Adventure",
             Book:"BOOK NOW"
         }

@@ -28,7 +28,7 @@ export default {
 
 <style scoped>
     .IntroHome{
-        background-image: url(../../../public/Home/bg.png);
+        background-image: url(Home/bg.png);
         background-position: center;
         background-attachment: fixed;
         background-size: cover;
